@@ -3,16 +3,16 @@
 By Frank M. Palinkas
 
       		
-## Introduction</h2>
+## Introduction
 
 In his book *ppk on JavaScript*, <a href="http://quirksmode.org">Peter-Paul Koch</a> points out that the HTML `noscript` element has a limitation. Modern user agents with JavaScript enabled will hide content contained within the `noscript` tags, and reveal it when JavaScript is disabled. User agents that do not support JavaScript will display the content within it. 
 
-User agents with partial/antiquated JavaScript capabilities however interpret the element correctly and do not show the content, but when JavaScript is disabled *also* do not show the content — it never gets rendered. This has an impact on the accessibility of the content. If your writing is targeted at modern, standards-based, compliant, and fully capable JavaScript user agents, employing the ~noscript` element is no problem. If the user agents among your audience are unpredictable, however, replacing the <code>&lt;noscript&gt;</code> element with another mechanism becomes
-		significant. This article looks at one such solution. 
-	</p>
+User agents with partial/antiquated JavaScript capabilities however interpret the element correctly and do not show the content, but when JavaScript is disabled *also* do not show the content — it never gets rendered. This has an impact on the accessibility of the content. 
+
+If your writing is targeted at modern, standards-based, compliant, and fully capable JavaScript user agents, employing the `noscript` element is no problem. If the user agents among your audience are unpredictable, however, replacing the `noscript` element with another mechanism becomes significant. This article looks at one such solution. 
+
 	
-	<h2>
-		The solution</h2>
+## The solution
 	<p>
 		So, how can the behavior intended by the <code>&lt;noscript&gt;</code> element be enabled in these antiquated/partially-capable JavaScript user agents? The workflow for my solution is as follows:</p>
 	<ul>
